@@ -1,0 +1,135 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|PgUp||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=ENTRADA:1
+1|[Label]|INICIO|1|0|Label|||||1|
+02|[Assign Variable]|Clipboard := "00"|1|0|Variable|Expression||||2|
+3|If Window Not Exist|autowhast.txt - Bloco de Notas|1|0|If_Statement|||||4|
+4|Run|C:\autowhats\autowhast.txt, , Max|1|0|Run|||||7|
+5|[Pause]||1|1000|Sleep|||||8|
+6|WinActivate||1|333|WinActivate||autowhast.txt - Bloco de Notas|||9|
+7|[Pause]||1|1000|Sleep|||||11|
+8|WinWait||1|333|WinWait||autowhast.txt - Bloco de Notas|||12|
+9|Home|{Home}|1|0|Send|||||14|
+10|[End If]|EndIf|1|0|If_Statement|||||15|
+11|WinActivate||1|333|WinActivate||autowhast.txt - Bloco de Notas|||16|
+12|[Pause]||1|1000|Sleep|||||18|
+13|WinWait||1|333|WinWait||autowhast.txt - Bloco de Notas|||19|
+14|[Text]|^{Home}|1|0|Send|||||21|
+15|[Label]|LerDestinos|1|0|Label|||||22|
+16|WinActivate||1|333|WinActivate||autowhast.txt - Bloco de Notas|||23|
+17|[Pause]||1|1000|Sleep|||||25|
+18|WinWait||1|333|WinWait||autowhast.txt - Bloco de Notas|||26|
+19|[Text]|+{End}|1|0|ControlSend|Edit1|autowhast.txt - Bloco de Notas|||28|
+20|[Text]|^c|1|0|ControlSend|Edit1|autowhast.txt - Bloco de Notas|||29|
+21|Home|{Home}|1|0|Send|||||30|
+22|Down|{Down}|1|0|Send|||||31|
+23|[Label]|SelecionarMsg|1|0|Label|||||31|
+24|If Window Not Exist|WhatsApp|1|0|If_Statement|||||32|
+25|Run|C:\Users\leaog\AppData\Local\WhatsApp\WhatsApp.exe, , Max|1|0|Run|||||34|
+26|[End If]|EndIf|1|0|If_Statement|||||35|
+27|[Pause]||1|1000|Sleep|||||36|
+28|WinActivate||1|333|WinActivate||WhatsApp|||37|
+29|[Pause]||1|1000|Sleep|||||39|
+30|Left Click, Continue, FoundX, FoundY, 1|9, 54, 203, 238, *4 C:\Users\leaog\AppData\Roaming\MacroCreator\Screenshots\Screen_20220816221925.png|1|1000|ImageSearch||Screen|||40|
+31|Move|0, 0, 0|1|10|Click|||||46|
+32|Left Click, Continue, FoundX, FoundY, 1|9, 54, 203, 238, *9 C:\Users\leaog\AppData\Roaming\MacroCreator\Screenshots\Screen_20220816200722.png|1|1000|ImageSearch|UntilFound|Screen|||48|
+33|[Pause]||1|1000|Sleep|||||58|
+34|[Text]|ab22|1|0|SendRaw|||||59|
+35|[Pause]||1|1000|Sleep|||||60|
+36|Enter|{Enter}|1|0|Send|||||61|
+37|[Pause]||1|300|Sleep|||||62|
+38|Continue, Continue, FoundX, FoundY, 0|640, 741, 932, 1032, *20 C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220917170802.png|1|0|ImageSearch||Window|||63|
+39|If Image/Pixel Found||1|0|If_Statement|||||65|
+40|[Pause]||1|10000|Sleep|||||67|
+41|[Goto]|INICIO|1|0|Goto|||||68|
+42|[End If]|EndIf|1|0|If_Statement|||||69|
+43|Move|0, 0, 0|1|10|Click|||||70|
+44|Left Click, Continue, FoundX, FoundY, 1|1719, 0, 1919, 203, *4 C:\Users\leaog\AppData\Roaming\MacroCreator\Screenshots\Screen_20220816235941.png|1|1000|ImageSearch|UntilFound|Screen|||72|
+45|Move|0, 0, 0|1|10|Click|||||82|
+46|[Pause]||1|1000|Sleep|||||84|
+47|If Clipboard Text|FIM|1|0|If_Statement|||||85|
+48|[Goto]|TudoEnviado|1|0|Goto|||||87|
+49|[End If]|EndIf|1|0|If_Statement|||||88|
+50|Left Click, Continue, FoundX, FoundY, 1|1446, 9, 1928, 458, *4 C:\Users\leaog\AppData\Roaming\MacroCreator\Screenshots\Screen_20220817002505.png|1|1000|ImageSearch|UntilFound|Window|||89|
+51|Move|1928, 441, 0|1|10|Click|||||99|
+52|Mouse Wheel Up|WheelUp, 20|5|200|Click|||||101|
+53|[Label]|loop|1|0|Label|||||106|
+54|[LoopStart]|LoopStart|4|0|Loop|||||107|
+55|[Pause]||1|300|Sleep|||||109|
+56|Left Click, Continue, FoundX, FoundY, 1|590, 67, 699, 1039, *70 C:\Users\leaog\AppData\Roaming\MacroCreator\Screenshots\Screen_20220817004126.png|2|10|ImageSearch|UntilFound|Screen|||110|
+57|[Pause]||1|300|Sleep|||||120|
+58|Left Click, Continue, FoundX, FoundY, 1|590, 67, 699, 1039, *70 C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220911100728.png|2|10|ImageSearch|UntilFound|Screen|||121|
+59|[LoopEnd]|LoopEnd|1|0|Loop|||||131|
+60|Mouse Wheel Down|WheelDown, 1|1|50|Click|||||132|
+61|Move|1928, 441, 0|1|10|Click|||||134|
+62|[Label]|BAIXAR|1|0|Label|||||136|
+63|[Label]|ENVIAR|1|0|Label|||||137|
+64|[Pause]||1|200|Sleep|||||138|
+65|Continue, Continue, FoundX, FoundY, 0|1783, 811, 1928, 991, C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220916200116.png|1|0|ImageSearch||Window|||139|
+66|If Image/Pixel Found||1|0|If_Statement|||||141|
+67|Mouse Wheel Down|WheelDown, 1|1|50|Click|||||143|
+68|[Goto]|loop|1|0|Goto|||||145|
+69|[End If]|EndIf|1|0|If_Statement|||||146|
+70|Continue, Continue, FoundX, FoundY, 0|1748, 886, 1928, 1081, C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220917181110.png|1|0|ImageSearch||Window|||147|
+71|If Image/Pixel Found||1|0|If_Statement|||||149|
+72|[Goto]|ENV2|1|0|Goto|||||151|
+73|[End If]|EndIf|1|0|If_Statement|||||152|
+74|Left Click, Continue, FoundX, FoundY, 0|1703, 920, 1928, 1088, C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220917172808.png|1|0|ImageSearch||Window|||153|
+75|[Pause]||1|300|Sleep|||||157|
+76|[Pause]||1|200|Sleep|||||158|
+77|Left Click, Continue, FoundX, FoundY, 0|616, 427, 987, 616, C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220917173006.png|20|1000|ImageSearch|UntilFound|Window|||159|
+78|[Pause]||1|1000|Sleep|||||168|
+79|Continue, Continue, FoundX, FoundY, 0|1695, 830, 1927, 1079, *15 C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220917180229.png|1|0|ImageSearch||Window|||169|
+80|If Image/Pixel Found||1|0|If_Statement|||||171|
+81|[Goto]|SelecionarMsg|1|0|Goto|||||173|
+82|[End If]|EndIf|1|0|If_Statement|||||174|
+83|[Pause]||1|300|Sleep|||||175|
+84|Continue, Continue, FoundX, FoundY, 0|1542, 847, 1925, 1034, C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220916232013.png|1|0|ImageSearch||Window|||176|
+85|If Image/Pixel Found||1|0|If_Statement|||||178|
+86|WinActivate||1|333|WinActivate||autowhast.txt - Bloco de Notas|||180|
+87|[Pause]||1|1000|Sleep|||||182|
+88|WinWait||1|333|WinWait||autowhast.txt - Bloco de Notas|||183|
+89|[Text]|^{End}|1|0|Send|||||185|
+90|[Text]|{Home}|1|0|Send|||||186|
+091|[Assign Variable]|Clipboard := "FIM"|1|0|Variable|Expression||||187|
+92|[Goto]|LerDestinos|1|0|Goto|||||189|
+93|[Pause]||1|301|Sleep|||||191|
+94|[End If]|EndIf|1|0|If_Statement|||||192|
+95|[Label]|ENV2|1|0|Label|||||193|
+96|Left Click, Continue, FoundX, FoundY, 1|1700, 816, 1919, 1079, *20 C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220911104513.png|1|10|ImageSearch|UntilFound|Screen|||194|
+97|WinActivate||1|333|WinActivate||WhatsApp|||204|
+98|[Pause]||1|1000|Sleep|||||206|
+99|[Text]|^v|1|0|Send|||||207|
+100|[Pause]||1|1000|Sleep|||||208|
+101|Left Click, Continue, FoundX, FoundY, 0|603, 174, 1366, 633, C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220916170009.png|1|0|ImageSearch||Window|||209|
+102|[Pause]||1|300|Sleep|||||213|
+103|Tab|{Tab}|1|0|Send|||||214|
+104|[Pause]||1|300|Sleep|||||215|
+105|Left Click, Continue, FoundX, FoundY, 0|948, 608, 1387, 1001, *40 C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220916164919.png|1|0|ImageSearch||Window|||216|
+106|[Goto]|LerDestinos|1|0|Goto|||||220|
+107|[Label]|TudoEnviado|1|0|Label|||||221|
+108|Left Click, Continue, FoundX, FoundY, 1|1446, 9, 1928, 458, *4 C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220916181926.png|1|1000|ImageSearch|UntilFound|Window|||222|
+109|Move|1928, 441, 0|1|10|Click|||||232|
+110|Mouse Wheel Up|WheelUp, 100|1|10|Click|||||234|
+111|[Pause]||1|300|Sleep|||||236|
+112|Tab|{Tab}|1|0|Send|||||237|
+113|[Pause]||1|300|Sleep|||||238|
+114|Tab|{Tab}|1|0|Send|||||239|
+115|[Pause]||1|300|Sleep|||||240|
+116|Tab|{Tab}|1|0|Send|||||241|
+117|[Pause]||1|300|Sleep|||||242|
+118|Enter|{Enter}|1|0|Send|||||243|
+119|[Pause]||1|300|Sleep|||||244|
+120|[MsgBox]|TudoEnviado|1|3|MsgBox|0|ok|||245|
+0121|WinActivate||1|333|WinActivate||autowhast.txt - Bloco de Notas|||246|
+122|[Pause]||1|5000|Sleep|||||249|
+0123|WinWait||1|333|WinWait||autowhast.txt - Bloco de Notas|||251|
+0124|[Text]|^{Home}|1|0|Send|||||254|
+125|Continue, Continue, FoundX, FoundY, 0|701, 864, 807, 943, *36 C:\Users\leaog\AppData\Roaming\MacroCreator\MacroCreator\Screenshots\Screen_20220916185212.png|1|0|ImageSearch||Window|||255|
+126|If Image/Pixel Found||1|0|If_Statement|||||258|
+127|[Pause]||1|10000|Sleep|||||260|
+128|[Goto]|INICIO|1|0|Goto|||||261|
+129|[End If]|EndIf|1|0|If_Statement|||||262|
+130|[Goto]|INICIO|1|0|Goto|||||263|
+
